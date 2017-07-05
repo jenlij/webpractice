@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+    <title>KittenPhotos.com</title>
+    <meta charset="utf-8">
+    <style>
+    /*selectors*/
+    header,
+    nav, 
+    main {
+        text-align: center;
+    }
+    /*nav > img means image must be first level nested*/
+    nav img {
+        width: 15%;
+        border: 1px solid purple;
+    }
+    nav a {
+        text-decoration: none;
+    }
+    main img {
+        width: 60%;
+    }
+    </style>
+    </head>
+    
+    
+    <body>
+        <header>
+            <h1>This is where the cool kittens are!</h1>
+            <h2>Check out the photos below!</h2>
+            <nav>
+                <!--<a href="http:digitalcrafts.com" title="DC website">DigitalCrafts Website</a> title is a tooltips and for accessibility -->
+                <a 
+                    href="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" 
+                    title="kitten with blanket"
+                    onclick="mainImage.src=this.href; return false"
+                >
+                    <img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="kitten"/>
+                </a>
+                <a 
+                    href="http://placekitten.com.s3.amazonaws.com/homepage-samples/200/287.jpg" 
+                    title="kitten 2"
+                    onclick="mainImage.src=this.href; return false"
+                >
+                    <img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/200/287.jpg" alt="kitten"/>
+                </a>                
+            </nav>
+        </header>
+        <main>
+            <img name="mainImage"/>
+            <!--<img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg" alt="cute kitten with blanket"/> alt for accessibility and in replacement of image-->
+        </main>
+    </body>
+
+
+</html>
