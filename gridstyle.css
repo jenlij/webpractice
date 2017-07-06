@@ -1,0 +1,44 @@
+html { 
+  box-sizing: border-box; 
+} 
+*, *:before, *:after { 
+  box-sizing: inherit; 
+}
+* {
+    border: 1px solid slategrey
+}
+
+.row {
+    width: 100%;
+    clear: both;
+}
+.main-cols {
+    width: 33%;
+    display: inline-block;    
+}
+
+.third {
+    float: left;
+    width: 33%;
+}
+.twothirds {
+    float: left;
+    width: 66%;
+}
+.half {
+    float: left;
+    width: 50%
+}
+
+.quarter {
+    float: left;
+    width: 25%;
+}
+.threefourths {
+    float: left;
+    width: 75%;
+}
+.clearfix {
+    overflow: none;
+    clear: both;
+}
