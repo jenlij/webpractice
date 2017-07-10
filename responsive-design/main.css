@@ -1,6 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 html {
   box-sizing: border-box;
@@ -10,7 +11,14 @@ html {
 }
 
 header {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;    
+}
+main {
+    display: flex;
+    flex-direction: column;
 }
 
 .cover-image {
@@ -20,18 +28,18 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: 2667px;
-  margin: 50px;
+  margin: 0 0 0 2.65%;
 
 }
 
-/* Custom, iPhone Retina */ 
-@media only screen and (min-width : 320px) {
+/*Phone*/ 
+@media only screen and (min-width : 300px) {
     .cover-image {
         background-image: url(bay-320.jpg); 
-        height:213px;
+        width: 95%;
+        height: 213px;
     }
     main {
-        display: flex;
         flex-direction: column;
     }
     p {
@@ -41,73 +49,49 @@ header {
     }
 }
 
-/* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
-    .cover-image {
-        background-image: url(bay-480.jpg); 
-        height:320px;
+/*Tablets */
+@media only screen and (min-width : 770px) {
+    header{
+        width:66%;
     }
-    main {
-        display: flex;
-        flex-direction: column;
-    }
-    p {
-        text-align: center;
-        justify-content: space-around;
-        margin: 50px;
-    }
-}
-
-
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
     .cover-image {
         background-image: url(bay-768.jpg); 
-        height:512px;
+        width: 95%;
+        height: 300px;   
     }
     main {
-        display: flex;
-        flex-direction: column;
+        width: 33%;
+        flex-direction: column;   
     }
     p {
         text-align: center;
-        justify-content: space-around;
-        margin: 50px;
+        justify-content: space-around;    
+    }
+    body {
+        flex-direction: row-reverse;
     }
 }
 
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+/*Desktops */
+@media only screen and (min-width : 1200px) {
+    header {
+        width: 100%;
+    }
     .cover-image {
         background-image: url(bay-992.jpg); 
-        height:661px;
+        width: 95%;
+        height: 700px;
     }
     main {
-        display: flex;
+        width: 100%;
         flex-direction: row;
     }
     p {
         text-align: center;
         justify-content: space-around;
-        margin: 50px;
+    }
+    body {
+        flex-direction: column;
     }
 }
 
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-    .cover-image {
-        background-image: url(bay-1200.jpg); 
-        height:800px;
-    }
-    main {
-        display: flex;
-        flex-direction: row;
-    }
-    p {
-        text-align: center;
-        justify-content: space-around;
-        margin: 50px;
-    }
-
-}
